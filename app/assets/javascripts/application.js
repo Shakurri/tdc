@@ -15,11 +15,7 @@
 //= require activestorage
 //= require_tree .
 //= require serviceworker-companion
-//
-//= require serviceworker-companion 
-//= require rails-ujs 
-//= require activestorage
-//= require_tree .
+
 
 $(function(){
   $('a').click(function(){
@@ -27,3 +23,5 @@ $(function(){
     return false;
   });
 });
+
+
