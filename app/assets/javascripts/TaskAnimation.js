@@ -8,14 +8,14 @@ $(function(){
     $(".icon_delate").slideUp();
     $(".message_del").slideUp(600);
     $(".message_del_but").slideUp(600);
-  })
+  }).css('cursor','pointer');
 })
 
 $(function(){
   $('.icon_delate').on('click',function(){
     $(".message_del").slideDown(600);
     $(".message_del_but").slideDown(600);
-  })
+  }).css('cursor','pointer');
 })
 
 $(function(){
@@ -24,7 +24,7 @@ $(function(){
     $(".input").slideDown();
     $(".icon_slide").fadeOut(500);
     $(".bury_box").fadeOut(500);
-  })
+  }).css('cursor','pointer');
 })
 
 $(function(){
@@ -33,7 +33,7 @@ $('.icon_fade').on('click',function(){
     $(".icon_delate").slideUp();
     $(".message_del").slideUp(600);
     $(".message_del_but").slideUp(600);
-  })
+  }).css('cursor','pointer');
 })
 
 $(function(){
@@ -42,7 +42,7 @@ $(function(){
     $(".header-form-container").slideUp(1000);
     $(".input").slideDown();
     $(".icon_slide").fadeOut(500);
-  })
+  }).css('cursor','pointer');
 })
 
 $(function(){
@@ -62,7 +62,7 @@ $(function(){
     $(".icon_delate").slideUp();
     $(".message_del").slideUp(600);
     $(".message_del_but").slideUp(600);
-  })
+  }).css('cursor','pointer');
 })
 
 $(function(){
@@ -77,14 +77,14 @@ $(function(){
     $(".message_del_but").slideUp(600);
     $(".backblack").fadeIn();
     $(".past_box").fadeIn(1500);
-  })
+  }).css('cursor','pointer');
 })
 
 $(function(){
   $('.rec_but').on('click',function(){
     $(".past_box").fadeOut(600);
     $(".backblack").fadeOut(1000);
-  })
+  }).css('cursor','pointer');
 })
 
 
