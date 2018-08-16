@@ -1,0 +1,219 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	background:#000000;
+	color:#fff;
+}
+
+
+// header{
+// 	border-bottom:2px solid #DF7401;
+// 	height:100px;
+// 	width:100%;
+// 	position:fixed;
+// 	background-color: #000000;
+// 	z-index: 100;
+// }
+
+// header p{
+// 	font-size: 15px;
+
+// }
+
+// .input{
+// 	margin:15px;
+// 	background-color: #2E2E2E;
+// 	width : -webkit-calc(100% - 30px) ;
+//     width : calc(100% - 30px) ;
+// 	height:70px;
+// 	font-size: 15px;
+// 	color:white;
+// 	border-radius:5px;
+// 	top:0;
+// 	padding:7px;
+// }
+
+// .main{
+// 	min-height:100vh;
+// 	padding: 110px 4% 60px;
+// 	display:flex;
+// 	align-content: flex-start;
+// 	flex-wrap: wrap-reverse;
+
+// }
+// .main div {
+// 	width: 30%;
+// 	margin: 0;
+// 	height: 100px;
+// 	background-image:url("capsule.png");
+// 	background-size: contain;
+// 	position: relative;
+// }
+
+// .month{
+// 	font-size: 25px;
+// 	color:white;
+// 	position:absolute;
+// 	left:15px;
+// 	top:3px;
+
+// }
+
+// .day{
+// 	font-size: 25px;
+// 	color:white;
+// 	position:absolute;
+// 	left:62px;
+// 	top:26px;
+
+// }
+
+// .title{
+// 	font-size: 30px;
+// 	color:white;
+// 	position:absolute;
+// 	left:13px;
+// 	top:45px;
+
+// }
+
+// .wrap{
+// 	position:absolute;
+// 	left: 27px;
+//     top: 10px;
+//     width: 40px;
+
+// }
+
+
+
+// .main div:nth-child(3n+2) {
+// 	margin: 0 5%;
+// }
+
+// .icon_back{
+// 	position: fixed;
+// 	left: 0;
+// 	bottom: 0;
+// 	width: 20%;
+// }
+
+// .icon_more{
+// 	position: fixed;
+// 	right: 0;
+// 	bottom: 0;
+// 	width: 20%;
+// }
+
+// .icon_delate{
+// 	position: fixed;
+// 	right:35%;
+// 	left:35%;
+// 	bottom: 0;
+// 	width:30%;
+// }
+
+// .set{
+// 	color:#fff;
+// 	height:70%;
+// 	padding-top: 110px;
+// 	font-size: 16px;
+// }
+
+// .set_title{
+// 	border-bottom:dashed 1px #df7401;
+// 	margin-left: 5%;
+// 	margin-right: 45%
+// }
+// .set_box{
+// 	margin:10px 15px;
+// 	background: #2E2E2E;
+// 	padding: 20px 10px;
+// 	border-radius: 10px
+
+
+// }
+// .set_box_low{
+// 	margin:10px;
+// 	color:#2e2e2e;
+// 	padding: 20px 10px;
+// 	border-radius: 10px;
+// 	font-size: 15px;
+// 	text-align: right;
+// }
+// .initial{
+// 	color:#df7401;
+// 	font-size: 20px;
+
+// }
+
+// .backg_icon{
+// 	position:fixed;
+// 	right:20px;
+// 	bottom:20px;
+// 	width:40%;
+// }
+
+// .over{
+// 	opacity: 0.6;
+// 	z-index: 40;
+// }
+// .capsule{
+// 	width:90%;
+// 	height:30%;
+// 	left:5%;
+// 	z-index: 50;
+// 	position: fixed;
+// 	top:180px;
+// 	border: solid 2px #df7401;
+// 	background:#2e2e2e;
+// 	border-radius: 15px
+// }
+
+// .content{
+// 	padding:5px;
+// 	margin:5px;
+// 	font-size: 20px;
+// 	color:#fff;
+// 	border-bottom: solid 1px #df7401;
+// }
+// .content_m{
+// 	font-size: 30px;
+// }
+// .limit{
+// 	font-size: 20px;
+// 	padding:5px;
+// 	margin:5px;
+// 	color:#fff;
+// }
+
+// .day_m{
+// 	font-size: 25px;
+// }
+
+// .month_m{
+// 	font-size: 25px;
+// }
+// .count{
+// 	font-size: 20px;
+// 	padding:5px;
+// 	margin:5px;
+// 	color:#df7401;
+// }
+// .count_m{
+// 	font-size: 25px;
+// }
+// .but_bury{
+// 	text-align: center;
+// 	font-size: 23px;
+// 	color: #2e2e2e;
+// 	padding:15px;
+// 	background: #df7401;
+// 	margin:10px;
+// 	border-radius: 10px;
+// }
+// footer{
+// 	background-color: #000000;
+// 	z-index: 100;
+// }

@@ -1,0 +1,110 @@
+<!-- <h1>Tasks#show</h1>
+<p>Find me in app/views/tasks/show.html.erb</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <td><%= @task.title %></td></tr>
+  <tr>
+    <th>Description</th>
+    <td><%= @task.description %></td>
+  </tr>
+  <tr>
+    <th>User.Email</th>
+    <td><%= @task.user.email %></td>
+  </tr>
+</table>
+<p><%= link_to '一覧に戻る', tasks_url %></p> -->
+
+<header>
+    <div class="input">
+    <p>> New Capsule.</p>
+    </div>
+
+    <div class="header-form-container">
+    <%= form_for(@task) do |f| %>
+    <table class="form_box">
+    <div>
+      <tr>
+      <td class="labels"><%= f.label :title, "内容:" %></td>
+      <td><%= f.text_field :title, :class=>"field" %></td>
+      <td class="slidein"><%= image_tag("slideup.png" ,:class => "icon_slide")%></td>
+    </tr>
+    </div>
+
+    <tr>
+    <div>
+      <td class="labels"><%= f.label :taeget_at, "期日:" %></td>
+      <td class="select"><%= f.date_select :target_at %></td>
+    </div>
+    </tr>
+
+
+
+    <tr>
+    <div>
+      <td class="labels"><%= f.label :description, "伝言:" %></td>
+      <td><%= f.text_area :description , :class=>"area"%></td>
+    </div>
+    <div>
+      <td class="bury_box"><%= f.submit 'Bury.', :class=>"bury" %></td>
+    </div>
+    </tr>
+
+    </div>
+    <% end %>
+  </table>
+
+    </div>
+
+    
+
+  </header>
+
+
+  <div class="capsule">
+    <p class="content">内容：<span class="content_m">卓の課題</span></p>
+    <span class="limit">期日：<span class="month_m">7</span>月<span class="day_m">30</span>日</span>
+    <span class="count">あと<span class="count_m">5</span>日</span>
+    <p class="but_bury">Digする!</p>
+
+
+
+
+  </div>
+
+  <div>
+  <div class="main">
+    
+      <% @tasks.each do |task| %>
+        <div>
+          <% if task.title %>
+            <% task_box = task.title.split(//) %>
+            <span class=title1><%= task_box[0] %></span>
+            <span class=title2><%= task_box[1] %></span>
+          <% end %>
+          <% if task.target_at %>
+            <span class=month><%= task.target_at.month %></span>
+            <span class=day><%= task.target_at.day %></span>
+          <% end %>
+          <%= image_tag("wrap.png" ,:class => "wrap")%>
+        </div>
+      <% end %>
+        
+
+    <div>
+      <span class=month>7</span>
+      <span class=day>30</span>
+      <span class=title1>卓</span>
+      <%= image_tag("wrap.png" ,:class => "wrap")%>
+    </div>
+  </div>
+
+
+  
+  <footer>
+  <%= image_tag("back.png" ,:class => "icon_back")%>
+  <%= image_tag("delate.png",:class => "icon_delate")%>
+
+  <%= link_to image_tag("more.png" ,:class => "icon_more"),setting_top_path%>
+
+  </footer>

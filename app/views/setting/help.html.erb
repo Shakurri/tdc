@@ -1,0 +1,69 @@
+<header>
+    <div class="input">
+    <p>> New Capsule.</p>
+    </div>
+
+    <div class="header-form-container">
+    <%= form_for(@task) do |f| %>
+    <table class="form_box">
+    <div>
+      <tr>
+      <td class="labels"><%= f.label :title, "内容:" %></td>
+      <td><%= f.text_field :title, :class=>"field" %></td>
+      <td class="slidein"><%= image_tag("slideup.png" ,:class => "icon_slide")%></td>
+    </tr>
+    </div>
+
+    <tr>
+    <div>
+      <td class="labels"><%= f.label :taeget_at, "期日:" %></td>
+      <td class="select"><%= f.date_select :target_at %></td>
+    </div>
+    </tr>
+
+
+
+    <tr>
+    <div>
+      <td class="labels"><%= f.label :description, "伝言:" %></td>
+      <td><%= f.text_area :description , :class=>"area"%></td>
+    </div>
+    <div>
+      <td class="bury_box"><%= f.submit 'Bury.', :class=>"bury" %></td>
+    </div>
+    </tr>
+
+    </div>
+    <% end %>
+  </table>
+
+    </div>
+
+    
+
+  </header>
+
+
+	<div class="set">
+
+	<p class="set_title"> <span class="initial">> H</span>elp.</p>
+	<p class="set_box">
+		<span class="initial">> </span>このアプリの使い方<br><br>
+		1.NewCapsuleで新規Capsuleを作成<br>
+		　↓<br>
+		2.内容・期日・伝言を入力<br>
+		　↓<br>
+		3.Buryで登録<br>
+		　↓<br>
+		4.期日になったらDigして伝言を受け取る
+	</p>
+
+	</div>
+	      <%= image_tag("icon" ,:class => "backg_icon")%>
+
+
+
+	
+	<footer>
+	      <%=link_to image_tag("back.png" ,:class => "icon_back"),setting_top_path%>
+	</footer>

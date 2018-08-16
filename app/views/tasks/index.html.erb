@@ -1,0 +1,184 @@
+<!-- <table>
+  <tr>
+    <th>Id</th><th>Title</th><th>Description</th><th></th><th></th><th></th>
+  </tr>
+  <% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.id %></td>
+    <td><%= task.title %></td>
+    <td><%= task.description %></td>
+    <td><%= link_to 'Show', task_path(task) %></td>
+    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+    <td><%= link_to 'Delete', task_path(task), method: :delete %></td>
+  </tr>
+  <% end %>
+</table> -->
+<!-- 
+<p>Find me in app/vlink_toiews/tasks/index.html.erb</p> -->
+<header>
+    <div class="input">
+    <p>> New Capsule.</p>
+    </div>
+
+    <div class="header-form-container">
+    <%= form_for(@task) do |f| %>
+    <table class="form_box">
+    <div>
+      <tr>
+      <td class="labels"><%= f.label :title, "内容:" %></td>
+      <td><%= f.text_field :title, :class=>"field" %></td>
+      <td class="slidein"><%= image_tag("slideup.png" ,:class => "icon_slide")%></td>
+    </tr>
+    </div>
+
+    <tr>
+    <div>
+      <td class="labels"><%= f.label :taeget_at, "期日:" %></td>
+      <td class="select"><%= f.date_select :target_at %></td>
+    </div>
+    </tr>
+
+
+
+    <tr>
+    <div>
+      <td class="labels"><%= f.label :description, "伝言:" %></td>
+      <td><%= f.text_area :description , :class=>"area"%></td>
+    </div>
+    <div>
+      <td class="bury_box"><%= f.submit 'Bury.', :class=>"bury" %></td>
+    </div>
+    </tr>
+
+    </div>
+    <% end %>
+  </table>
+  </div>
+
+  <span class="message_del">
+    Do you really want to delete?
+  </span>
+
+  <% if @taskParam %>
+  <%= link_to task_path(@taskParam), method: :delete do%>
+  <span class="message_del_but">
+    Delete
+  </span>
+  <% end %>
+  <% end %>
+
+
+    
+
+  </header>
+
+  <div class="capsule">
+    <% if @taskParam %>
+    <p class="content">内容：<span class="content_m"><%= @taskParam.title %></span></p>
+    <%= image_tag("slideup.png" ,:class => "icon_fade")%>
+    <span class="limit">期日：
+      <span class="month_m">
+      <% if @taskParam.target_at %>
+      <%= @taskParam.target_at.month %>
+        <% end %>
+      </span>月<span class="day_m">
+        <% if @taskParam.target_at %>
+      <%= @taskParam.target_at.day %>
+      <% end %>
+    </span>日</span>
+    <span class="count">あと<span class="count_m">
+    <% if @taskParam.target_at %>
+      <% @taskParam.target_at.to_date %>
+      <% @goal = @taskParam.target_at.to_date - Date.today %>
+      <%if @goal.to_i > 0 %>
+        <%= @goal.to_i %>
+        <% else %>
+        0
+        <%end%>
+    <% end %>
+  </span>日</span>
+    <p class="but_bury">Dig.</p>
+    <% end %>
+  </div>
+
+<div class="backblack">
+</div>
+
+
+  <%if @taskParam%>
+  <div class="past_box">
+
+    <div class="relative">
+      <%= image_tag("past_message.png" ,:class => "past_message")%>
+      <%= image_tag("past.png" ,:class => "past_hum")%>
+      <p class="you">
+        <span class="month_m">
+      <% if @taskParam.created_at %>
+      <%= @taskParam.created_at.month %>
+        <% end %>
+      </span>月
+      <span class="day_m">
+        <% if @taskParam.created_at %>
+      <%= @taskParam.created_at.day %>
+      <% end %>
+    </span>日の<br>
+      あなたからのお言葉
+    </p>
+
+
+    <% if @taskParam %>
+    <%= link_to task_path(@taskParam), method: :delete do%>
+    <span class="rec_but">Receive.</span>
+    <% end %>
+    <% end %>
+
+
+
+    <p class="time_message">
+      <% if @taskParam.description %>
+      <%= @taskParam.description %>
+      <% end %>
+    </p>
+
+    </div>
+
+  </div>
+  <% end %>
+
+  <div>
+  <div class="main">
+    <% @tasks.each do |task| %>
+      <div>
+        <%= link_to(tasks_path(id: task.id)) do %>
+        <% if task.title %>
+          <% task_box = task.title.split(//) %>
+          <span class=title1><%= task_box[0] %></span>
+          <span class=title2><%= task_box[1] %></span>
+        <% end %>
+        <% if task.target_at %>
+          <span class=month><%= task.target_at.month %></span>
+          <span class=day><%= task.target_at.day %></span>
+        <% end %>
+        <% if task.target_at %>
+        <% task.target_at.to_date %>
+        <% count = task.target_at.to_date - Date.today %>
+          <% if count.to_i > 0 %>
+            <%= image_tag("wrap.png" ,:class => "wrap")%>
+          <% end %>
+          <% end %>
+
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+
+  
+  <footer>
+  <%= image_tag("back.png" ,:class => "icon_back")%>
+  <%= image_tag("delate.png",:class => "icon_delate")%>
+
+  <%= link_to image_tag("more.png" ,:class => "icon_more"),setting_top_path%>
+
+  </footer>
+
