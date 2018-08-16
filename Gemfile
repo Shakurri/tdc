@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 gem 'rails_12factor', group: :production
 
 # Use ActiveStorage variant
