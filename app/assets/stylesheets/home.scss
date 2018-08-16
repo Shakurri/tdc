@@ -232,7 +232,7 @@ header p{
 	font-weight:bold;
 }
 .bury_box{
-	background-image:url("backg_bury.png");
+	background-image:image-url("backg_bury.png");
 	background-size:100%;
 	background-position: 0px 74%;
     display: none;
@@ -265,7 +265,7 @@ header p{
 	width: 30%;
 	margin: 0;
 	height: 100px;
-	background-image:url("capsule.png");
+	background-image:image-url("capsule.png");
 	background-size: contain;
 	position: relative;
 }
