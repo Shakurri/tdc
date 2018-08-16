@@ -10,18 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
 //= require serviceworker-companion
-
-
-$(function(){
-  $('a').click(function(){
-    location.href = $(this).attr('href');
-    return false;
-  });
-});
 
 

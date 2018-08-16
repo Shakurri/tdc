@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <%= csrf_meta_tags %>
+
+  <head>
+    <title>ToDoCapsule</title>
+    <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="theme-color" content="#df7401">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <header>
-    <title>TDC</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </header>
-
+    <%= javascript_include_tag 'application' %>
+  <link rel="manifest" href="/manifest.json" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="<%=image_path("icon3.png")%>" />
 </head>
 
   <body>
@@ -28,5 +35,103 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->   
     <%= yield %>
+    <script>
+    $(function(){
+  $('a').click(function(){
+    location.href = $(this).attr('href');
+    return false;
+  });
+  $('.input').on('touchstart',function(){
+    console.log("a");
+    $(".header-form-container").slideDown();
+    $(".input").slideUp(700);
+    $(".icon_slide").fadeIn();
+    $(".bury_box").fadeIn(1000);
+    $(".capsule").fadeOut(500);
+    $(".icon_delate").slideUp();
+    $(".message_del").slideUp(600);
+    $(".message_del_but").slideUp(600);
+  }).css('cursor','pointer');
+
+
+
+  $('.icon_delate').on('touchstart',function(){
+    $(".message_del").slideDown(600);
+    $(".message_del_but").slideDown(600);
+  }).css('cursor','pointer');
+
+
+
+  $('.slidein').on('touchstart',function(){
+    $(".header-form-container").slideUp(600);
+    $(".input").slideDown();
+    $(".icon_slide").fadeOut(500);
+    $(".bury_box").fadeOut(500);
+  }).css('cursor','pointer');
+
+
+$('.icon_fade').on('touchstart',function(){
+    $(".capsule").fadeOut(500);
+    $(".icon_delate").slideUp();
+    $(".message_del").slideUp(600);
+    $(".message_del_but").slideUp(600);
+  }).css('cursor','pointer');
+
+
+
+  $('.bury').on('touchstart',function(){
+    $(".bury_box").fadeTo(300,0.1);
+    $(".header-form-container").slideUp(1000);
+    $(".input").slideDown();
+    $(".icon_slide").fadeOut(500);
+  }).css('cursor','pointer');
+
+
+  var match = location.search.match(/id=(.*?)(&|$)/);
+  console.log(match);
+
+  if(match) {
+      id = decodeURIComponent(match[1]);
+      $(".capsule").fadeIn(500);
+      $(".icon_delate").slideDown();
+      $(".message_del").slideUp(600);
+      $(".message_del_but").slideUp(600);
+  }
+
+  $('.icon_fade').on('touchstart',function(){
+    $(".capsule").fadeOut(500);
+    $(".icon_delate").slideUp();
+    $(".message_del").slideUp(600);
+    $(".message_del_but").slideUp(600);
+  }).css('cursor','pointer');
+
+
+
+  $('.but_bury').on('touchstart',function(){
+    $(".bury_box").fadeTo(300,0.1);
+    $(".header-form-container").slideUp(1000);
+    $(".input").slideDown();
+    $(".icon_slide").fadeOut(500);
+    $(".capsule").fadeOut(500);
+    $(".icon_delate").slideUp();
+    $(".message_del").slideUp(600);
+    $(".message_del_but").slideUp(600);
+    $(".backblack").fadeIn();
+    $(".past_box").fadeIn(1500);
+  }).css('cursor','pointer');
+
+
+  $('.rec_but').on('touchstart',function(){
+    $(".past_box").fadeOut(600);
+    $(".backblack").fadeOut(1000);
+  }).css('cursor','pointer');
+})
+</script>
+
+
+
+
+
+
   </body>
 </html>
