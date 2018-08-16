@@ -1,5 +1,5 @@
 $(function(){
-  $('.input').on('click',function(){
+  $('.input').on('touchstart',function(){
     $(".header-form-container").slideDown();
     $(".input").slideUp(700);
     $(".icon_slide").fadeIn();
@@ -12,14 +12,14 @@ $(function(){
 })
 
 $(function(){
-  $('.icon_delate').on('click',function(){
+  $('.icon_delate').on('touchstart',function(){
     $(".message_del").slideDown(600);
     $(".message_del_but").slideDown(600);
   }).css('cursor','pointer');
 })
 
 $(function(){
-  $('.slidein').on('click',function(){
+  $('.slidein').on('touchstart',function(){
     $(".header-form-container").slideUp(600);
     $(".input").slideDown();
     $(".icon_slide").fadeOut(500);
@@ -28,7 +28,7 @@ $(function(){
 })
 
 $(function(){
-$('.icon_fade').on('click',function(){
+$('.icon_fade').on('touchstart',function(){
     $(".capsule").fadeOut(500);
     $(".icon_delate").slideUp();
     $(".message_del").slideUp(600);
@@ -37,7 +37,7 @@ $('.icon_fade').on('click',function(){
 })
 
 $(function(){
-  $('.bury').on('click',function(){
+  $('.bury').on('touchstart',function(){
     $(".bury_box").fadeTo(300,0.1);
     $(".header-form-container").slideUp(1000);
     $(".input").slideDown();
@@ -57,7 +57,7 @@ $(function(){
       $(".message_del_but").slideUp(600);
   }
 
-  $('.icon_fade').on('click',function(){
+  $('.icon_fade').on('touchstart',function(){
     $(".capsule").fadeOut(500);
     $(".icon_delate").slideUp();
     $(".message_del").slideUp(600);
@@ -66,7 +66,7 @@ $(function(){
 })
 
 $(function(){
-  $('.but_bury').on('click',function(){
+  $('.but_bury').on('touchstart',function(){
     $(".bury_box").fadeTo(300,0.1);
     $(".header-form-container").slideUp(1000);
     $(".input").slideDown();
@@ -81,7 +81,7 @@ $(function(){
 })
 
 $(function(){
-  $('.rec_but').on('click',function(){
+  $('.rec_but').on('touchstart',function(){
     $(".past_box").fadeOut(600);
     $(".backblack").fadeOut(1000);
   }).css('cursor','pointer');
