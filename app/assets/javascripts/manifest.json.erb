@@ -1,19 +1,16 @@
-<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
 {
-  "name": "My Progressive Rails App",
-  "short_name": "Progressive",
-  "start_url": "/",
+  "name": "ToDoCapsule", #アプリの長い名前
+  "short_name": "TDC", #アプリの短い名前
+  "start_url": "/", #起動時のパス
   "icons": [
-  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
     {
-      "src": "<%= image_path "serviceworker-rails/heart-#{dim}.png" %>",
-      "sizes": "<%= dim %>",
-      "type": "image/png"
-    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
-  <% end %>
+      "src": "<%=image_path("icon2.png")%>", #アイコン
+      "type": "image/png",
+      "sizes": "192x192"
+    }
   ],
-  "theme_color": "#000000",
-  "background_color": "#FFFFFF",
+  "theme_color": "#fd7401", #テーマ
+  "background_color": "#2e2e2e", #起動時の色
   "display": "fullscreen",
   "orientation": "portrait"
 }
