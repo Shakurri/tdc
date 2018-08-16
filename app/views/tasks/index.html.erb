@@ -55,17 +55,24 @@
   </table>
   </div>
 
+
+  <table>
+    <td>
   <span class="message_del">
     Do you really want to delete?
   </span>
+  </td>
 
+  <td>
   <% if @taskParam %>
-  <%= link_to task_path(@taskParam), method: :delete do%>
+  <%= button_to task_path(@taskParam), method: :delete do%>
   <span class="message_del_but">
     Delete
   </span>
   <% end %>
   <% end %>
+  </td>
+  </table>
 
 
     
@@ -127,7 +134,7 @@
 
 
     <% if @taskParam %>
-    <%= link_to task_path(@taskParam), method: :delete do%>
+    <%= button_to task_path(@taskParam), method: :delete do%>
     <span class="rec_but">Receive.</span>
     <% end %>
     <% end %>

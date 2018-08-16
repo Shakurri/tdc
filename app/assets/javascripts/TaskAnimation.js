@@ -1,5 +1,6 @@
 $(function(){
   $('.input').on('touchstart',function(){
+    console.log("haittayo!!");
     $(".header-form-container").slideDown();
     $(".input").slideUp(700);
     $(".icon_slide").fadeIn();

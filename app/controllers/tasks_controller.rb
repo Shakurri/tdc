@@ -28,8 +28,7 @@ def edit
 end
 
 def dig
-  # @taskParam.completed = true
-  # redirect_to task_path(@taskParam), method: :delete
+
 end
 
 def update
