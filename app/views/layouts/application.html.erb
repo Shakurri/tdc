@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ToDoCapsule</title>
-    <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta name="theme-color" content="#df7401">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  <link rel="manifest" href="/manifest.json" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" href="<%=image_path("icon3.png")%>" />
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <header>
+    <title>TDC</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </header>
+
 </head>
 
   <body>
